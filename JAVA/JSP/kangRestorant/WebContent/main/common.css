@@ -1,0 +1,1081 @@
+@charset "utf-8";
+
+/* ------------------------------------------------------------
+* Name      : common.css
+* Desc       : interest me POC / common Style Sheet
+* Created   : 2012-06-02 CJ E&M 
+------------------------------------------------------------ */
+
+/* CJ_default */
+body { margin:0; padding:0; font-family:'돋움', Dotum, '굴림', Gulim, HelveticaNeue-Light, AppleSDGothicNeo-Light, sans-serif; font-size:12px; -webkit-text-size-adjust:none; color:#666; line-height:1.4;}
+h1, h2, h3, h4, h5, h6, form, div, p, em, img, table, tr, td, fieldset, label, dl, dt, dd { padding:0; margin:0; border:0;}
+h1, h2, h3, h4, h5, h6 {font-size:100%; font-weight:normal;}
+hr {display: none;}
+label {vertical-align:middle;}
+em, i {font-style:normal; }
+ul, ol, li {padding:0; margin:0; list-style:none;}
+.skip, legend, caption, .blindTit {position:absolute; top:0; left:-100px; width:0; height:0; overflow:hidden; visibility:hidden; font-size:0; line-height:0;}
+img {vertical-align:top; border:none 0;}
+table {width:100%;border:0;border-collapse:collapse;border-spacing:0;empty-cells:show;}
+button {cursor:pointer;border:none;}
+
+a, a:link, a:active, a:visited {color:#666; text-decoration:none; }
+a:hover {text-decoration:underline;}
+.png24 { tmp:expression(setPNG24(this));}
+
+/* input */
+input.text {padding:4px 2px 2px 2px; height:15px; border:1px solid #ccc; font-family:'돋움', Dotum, '굴림', Gulim, HelveticaNeue-Light, AppleSDGothicNeo-Light, sans-serif; font-size:12px; color:#757575; vertical-align:middle;}
+input.radio, input.checkbox { width:13px; height:13px; margin:0 3px -2px 3px; padding:0; }
+textarea {padding:2px; border:1px solid #ccc; background:#fff; font-family:arial,'돋움', Dotum, '굴림', Gulim, HelveticaNeue-Light, AppleSDGothicNeo-Light, sans-serif; font-size:12px; vertical-align:middle;}
+select {height:18px; border:1px solid #ccc; font-family:'돋움', Dotum, '굴림', Gulim, HelveticaNeue-Light, AppleSDGothicNeo-Light, sans-serif; font-size:12px; vertical-align:middle; }
+select {
+  text-overflow: ellipsis;
+  white-space: nowrap;}
+select:focus {outline-color: #c00;}
+input {font-family:'돋움', Dotum, '굴림', Gulim, HelveticaNeue-Light, AppleSDGothicNeo-Light, sans-serif; font-size:12px;}
+
+address{font-family:'돋움', Dotum, sans-serif; font-style:normal;}
+
+article,aside,canvas,details,figcaption,figure, footer,header,hgroup,menu,nav,section,summary {display:block;}
+
+.ellipsis {text-overflow: ellipsis; -o-text-overflow: ellipsis;  -moz-binding:url('./ellipsis.xml#ellipsis'); -moz-binding:url('./ellipsis.xml#ellipsis'); white-space: nowrap; overflow: hidden;}
+.img_valign {display:inline-block; margin-top:-1px; overflow:hidden; height:100%; vertical-align:middle;}
+
+
+
+/* common */
+.cboth:before, .cboth:after {content:"";display:table;}
+.cboth:after {clear:both;}
+.cboth {zoom:1;}
+* html .cboth {zoom:1;}
+
+#content {position:relative;width:980px;margin:30px auto 0; padding-bottom:60px;background:url('../images/common/bg/bg_sub_contents.gif') repeat-y 100% 67px;}
+#content.onstyle2012 {background:none; margin:0 auto; padding:0px;}
+#content.evtMain {background:none;padding:0px;}
+
+.locationMap {position:absolute;right:5px;top:0;font-size:11px;color:#999;letter-spacing:-1px;}
+.locationMap a {color:#999;}
+.locationMap strong {color:#666;}
+
+.contentInnerWrap {position:relative;float:left;width:720px;}
+.contentInnerWrap h3 {font-size:16px;font-weight:bold;color:#1d1d1d;letter-spacing:-1px;}
+.contentInnerWrap h3.first {padding-bottom:4px;border-bottom:3px solid #252525;}
+
+/* paginate */
+.paginate {padding:20px 0;text-align:center;}
+.paginate a {display:inline-block;height:15px;padding:0 10px 0 8px;font-family:Verdana;color:#999;line-height:15px;background:url('../images/common/btn/btn_iconSet.gif') no-repeat 100% 4px}
+.paginate a.last_child {background:none;}
+.paginate .selected {font-weight:bold;color:#333;}
+.paginate .first {width:16px;height:15px;padding:0;text-indent:-9999px;background:url('../images/common/btn/btn_iconSet.gif') no-repeat -42px 0;}
+.paginate .prev {width:16px;height:15px;padding:0;text-indent:-9999px;background:url('../images/common/btn/btn_iconSet.gif') no-repeat -60px 0;}
+.paginate .next {width:16px;height:15px;padding:0;text-indent:-9999px;background:url('../images/common/btn/btn_iconSet.gif') no-repeat -78px 0;}
+.paginate .end {width:16px;height:15px;padding:0;text-indent:-9999px;background:url('../images/common/btn/btn_iconSet.gif') no-repeat -96px 0;}
+.paginate span {display:inline-block;width:1px;height:15px;font-size:11px;color:#e0e0e0;line-height:15px;}
+.paginate_mobile {display:none;}
+
+
+aside {float:right;width:240px;padding-top:26px;background:url('../images/common/bg/bg_aside.gif') no-repeat;}
+
+.adBanner {width:240px; height:240px; background:url('../images/common/bg/no_img_240.jpg') no-repeat;}
+.adBanner img {width:240px;height:240px;}
+
+aside h3 {font-family:arial;font-size:14px;font-weight:bold;color:#333;}
+
+aside .update {padding:0 15px;border-bottom:1px solid #e1e1e1;}
+aside .update {margin-top:16px;}
+aside .update ul {margin-top:10px;padding-bottom:7px;}
+aside .update ul li {overflow:hidden;margin-bottom:8px;}
+aside .update ul li {overflow:hidden;margin-bottom:8px;}
+aside .update ul li .thumbnail {float:left;width:80px;height:52px;border:1px solid #ccc;}
+aside .update ul li .thumbnail img {width:80px;height:52px;}
+aside .update ul li .InfoWrap {float:right;width:118px;}
+aside .update ul li .InfoWrap a {font-size:11px;line-height:14px;}
+aside .update ul li .InfoWrap span {display:block; color:#bfbfbf;}
+
+aside .interest {padding:0 10px;margin-top:11px;border-bottom:1px solid #e1e1e1;}
+aside .interest h3 {padding-left:23px;background:url('../images/common/icon/icon_interestme.png') 0 0px no-repeat;}
+aside .interest ul {overflow:hidden;margin-top:7px;padding-bottom:3px;}
+aside .interest ul li {float:left;width:100px; height:146px; margin:0 5px 9px;}
+
+aside .interest ul li .thumbnail  {display:block;  width:98px;height:98px; background:#2d2d2d; border:1px solid #ccc; text-align:center;}
+aside .interest ul li .thumbnail span { text-align:center; vertical-align:middle;}
+aside .interest ul li .thumbnail span a {display:inline;}
+aside .interest ul li .thumbnail span a img {vertical-align:middle; max-width:98px; max-height:98px;}
+aside .interest ul li .InfoWrap {margin-top:9px;font-size:11px;line-height:14px;}
+
+aside .p_wrap {width:210px; padding:14px 15px;}
+aside .p_wrap p img {width:208px; height:103px; border:1px solid #333;}
+aside .p_wrap dl {padding:4px 8px; line-height:16px;}
+aside .p_wrap dl dt {font-size:11px; font-weight:bold; color:#333;}
+aside .p_wrap dl dd {font-size:11px; color:#999999;}
+aside .p_wrap .combobox {padding-top:5px;  text-align:center;}
+aside .p_wrap .combobox select {width:202px; height:22px; padding:3px 0; color:#999999; font-size:12px; line-height:22px; vertical-align:top;}
+
+aside .recommandEvt {width:210px;margin:20px auto 0;}
+aside .recommandEvt h3 img {display:block;}
+aside .recommandEvt ul li {padding-top:10px;}
+aside .recommandEvt ul li a img {display:block;width:210px;height:84px;}
+aside .announceList {position:relative;width:210px;margin:20px auto 0;}
+
+aside .announceList h3 {font-size:13px;font-family:'Malgun Gothic';}
+aside .announceList .btnMore {position:absolute;top:4px;right:0px;padding-right:7px;color:#999999;font-size:11px;letter-spacing:-1px;background:url('../images/common/icon/blt_arrow_btn.gif') right 1px no-repeat;}
+aside .announceList ul {padding-top:6px;}
+aside .announceList ul li {width:210px;padding-top:6px;}
+aside .announceList ul li a {overflow:hidden;display:block;padding-left:7px;text-overflow:ellipsis;white-space:nowrap;letter-spacing:-1px;background:url('../images/common/icon/blt_dot85.gif') 0 6px no-repeat;}
+/* program 템플릿 우측 */
+.program_temp aside {padding-top:0px; background-position:0 -26px}
+
+
+.asideBanner a img {width:210px;height:110px;}
+
+.r_box {position:relative;  background:#f6f6f6; border:1px solid #d9d9d9;}
+.r_box span {display:block; position:absolute; width:8px; height:8px; padding:0px; background:url('../images/common/bg/bg_memberbox_set.gif') no-repeat; }
+.r_box span.top_left {top:-1px; left:-1px; background-position:0 0;}
+.r_box span.top_right {top:-1px; right:-1px; background-position:right 0;}
+.r_box span.bottom_left {bottom:-1px; left:-1px; background-position:0 bottom;}
+.r_box span.bottom_right {bottom:-1px; right:-1px; background-position:right bottom;}
+
+/* 셀렉트 박스 */
+#selectLayer {position:absolute;z-index:10;}
+#selectLayer .selectTitle {overflow:hidden;display:block;height:24px;padding:0 25px 0 10px;font-weight:bold;text-overflow:ellipsis;line-height:26px;white-space:nowrap;border:1px solid #666;background:url('../images/common/btn/btn_iconSet.gif') no-repeat 100% -151px;z-index:11;}
+#selectLayer .open {background-position:100% -181px;}
+#selectLayer .selectTitle:hover {text-decoration:none;}
+#selectLayer .selectOptionList {position:absolute;left:0;top:24px;display:none;border:1px solid #666;background:#fff;z-index:12;}
+#selectLayer.specialEPSelect .selectOptionList ul li {overflow:hidden;padding:0 10px;text-overflow:ellipsis;line-height:31px;white-space:nowrap;background:url('../images/common/bg/bg_hl_dot.gif') repeat-x 0 100%;}
+#selectLayer .selectOptionList .paginate {padding:12px 0 15px;}
+
+/* 셀렉트박스 type02 */
+.selectWrap {position:relative;padding-top:3px;}
+/*
+.selectWrap {position:relative;height:21px;border:1px solid #d9d9d9;}
+.selectWrap p {display:none;position:absolute;width:100%;height:21px;opacity:0;}
+.selectWrap p select {width:100%;height:21px;}
+.selectWrap .selected_option {display:block;padding:0 25px 0 5px;line-height:21px;background:#fff url('../images/common/icon/select_arrow02.gif') right -21px no-repeat;}
+.selectWrap .list_open {background-position:right 0;}
+.selectWrap ul {display:none;position:absolute;top:21px;left:-1px;width:100%;padding:3px 0;background:#fff;border:1px solid #ccc;}
+.selectWrap ul li {border:none;height:25px;}
+.selectWrap ul a {display:block;padding:2px;line-height:21px;background:none;}
+.selectWrap ul a:hover {background:#eee;}
+*/
+
+.ad_banner01 {width:980px; margin:20px auto; background:#eaeaea; text-align:center; font-size:0px; overflow:hidden;}
+*:first-child+html .ad_banner01 {background:none;}
+.ad_banner02 {width:610px; margin:0 auto;  padding-top:40px; text-align:center;}
+.ad_banner03 {width:210px; margin:0 auto; padding-top:15px; text-align:center;}
+.ad_banner03 img {width:210px; height:110px;}
+.ad_banner04 {width:210px; margin:0 auto; padding-top:10px; text-align:center;}
+.ad_banner04 img {width:210px; height:110px;}
+
+.admin_banner {width:210px; margin:0 auto; padding:10px 0;}
+.admin_banner img {width:210px;}
+
+
+
+/* 인터스티셜 광고 */
+.ad_interstitial {position:absolute;top:0px;left:0px;width:100%;height:100%;z-index:9999;}
+.ad_interstitial .bg {position:absolute;top:0px;left:0px;width:100%;height:100%;background:#000;opacity:0.6;filter:alpha(opacity=60);}
+.ad_interstitial .ad_cont {position:relative;width:720px;margin:0 auto;padding-top:90px;text-align:center;}
+.ad_interstitial .ad_cont div {}
+.ad_interstitial .ad_cont .btn_skip {margin-top:20px;}
+
+
+/* poc type */
+.poc_title .poc_list li.onstyle:hover a, .poc_title .poc_list li.onstyle.selected a, .poc_wrap .onstyle .go_channel span,
+.onstyle .depth1 .lnb_menu li.selected a.depth01,
+.onstyle .lnb_wrap .lnb_2depth dl dt , 
+.onstyle .lnb_wrap .lnb_2depth dl dt a,
+.onstyle .main_title_wrap p span,
+.onstyle .mc_top_wrap dl.schedule_wrap dt p span ,
+.onstyle .mc_top_wrap dl.schedule_wrap dd ul li span,
+.onstyle .tv_wrap .tv_right .p_wrap dl dt,
+.onstyle .tv_wrap .program_right .program_vod dl.tv_vod dd.program_title,
+.onstyle .contentInnerWrap h3 em,
+.onstyle .programEvent ul li .InfoWrap a,
+.onstyle .programList li .InfoWrap a.airTime,
+.onstyle .vodView .otherVod h4 em,
+.onstyle .vodMain .topContent .relatedNews dt,
+.onstyle aside .p_wrap dl dt,
+.onstyle .bbsListTypeDefault td em,
+.onstyle .app_download .download_wrap .app_title span,
+.onstyle .otherEvent .titleWrap h4 strong,
+.onstyle .channelEvtList .titleWrap h4 span {color:#f048b1;}
+
+.onstyle span.icon_new, li.onstyle span.icon_new {background-position:0 -250px;}
+.onstyle .vodMain .topContent .thumbnailList li.selected a {background:url('../images/common/bg/bg_thumbnailBox_onstyle.gif') no-repeat;}
+
+
+.onstyle .mc_top_wrap dl.schedule_wrap dd ul li.onair .icon_onair {background-position:0 -20px;}
+
+.onstyle ::-moz-selection {
+  background:#f048b1; color: #fff; text-shadow: none;
+}
+.onstyle ::selection {
+  background:#f048b1; color: #fff; text-shadow: none;
+}
+.onstyle .pocGnb .pocGnbArea > .pocNavi > li .depth1 a.selected, .onstyle .pocGnb .pocGnbArea > .pocNavi > li .depth1 a:hover {background:#f048b1;}
+.onstyle #view_cont .list_movie li.selected .pic_b {border-color:#f048b1;}
+
+/* 2017/07/05 onstyle rebranding #ff9595 -> #d80a00 */
+.poc_title .poc_list li.onstyle:hover a, .poc_title .poc_list li.onstyle.selected a, .poc_wrap .onstyle .go_channel span,
+.onstyle .depth1 .lnb_menu li.selected a.depth01,
+.onstyle .lnb_wrap .lnb_2depth dl dt , 
+.onstyle .lnb_wrap .lnb_2depth dl dt a,
+.onstyle .main_title_wrap p span,
+.onstyle .mc_top_wrap dl.schedule_wrap dt p span ,
+.onstyle .mc_top_wrap dl.schedule_wrap dd ul li span,
+.onstyle .tv_wrap .tv_right .p_wrap dl dt,
+.onstyle .tv_wrap .program_right .program_vod dl.tv_vod dd.program_title,
+.onstyle .contentInnerWrap h3 em,
+.onstyle .programEvent ul li .InfoWrap a,
+.onstyle .programList li .InfoWrap a.airTime,
+.onstyle .vodView .otherVod h4 em,
+.onstyle .vodMain .topContent .relatedNews dt,
+.onstyle aside .p_wrap dl dt,
+.onstyle .bbsListTypeDefault td em,
+.onstyle .app_download .download_wrap .app_title span,
+.onstyle .otherEvent .titleWrap h4 strong,
+.onstyle .channelEvtList .titleWrap h4 span {color:#d80a00;}
+
+.onstyle span.icon_new, li.onstyle span.icon_new {background-position:0 -250px;}
+.onstyle .vodMain .topContent .thumbnailList li.selected a {background:url('../images/common/bg/bg_thumbnailBox_onstyle.gif') no-repeat;}
+
+
+.onstyle .mc_top_wrap dl.schedule_wrap dd ul li.onair .icon_onair {background-position:0 -20px;}
+
+.onstyle ::-moz-selection {
+  background:#d80a00; color: #fff; text-shadow: none;
+}
+.onstyle ::selection {
+  background:#d80a00; color: #fff; text-shadow: none;
+}
+.onstyle .pocGnb .pocGnbArea > .pocNavi > li .depth1 a.selected, .onstyle .pocGnb .pocGnbArea > .pocNavi > li .depth1 a:hover {background:#d80a00;}
+.onstyle #view_cont .list_movie li.selected .pic_b {border-color:#d80a00;}
+
+/* 2017/04/20 olive rebranding #ff6900 -> #86cc00 -> #ff3700 */
+.poc_title .poc_list li.olive:hover a, .poc_title .poc_list li.olive.selected a, .poc_wrap .olive .go_channel span,
+.olive .depth1 .lnb_menu li.selected a.depth01,
+.olive .lnb_wrap .lnb_2depth dl dt , 
+.olive .lnb_wrap .lnb_2depth dl dt a,
+.olive .main_title_wrap p span,
+.olive .mc_top_wrap dl.schedule_wrap dt p span ,
+.olive .mc_top_wrap dl.schedule_wrap dd ul li span,
+.olive .tv_wrap .tv_right .p_wrap dl dt,
+.olive .tv_wrap .program_right .program_vod dl.tv_vod dd.program_title,
+.olive .contentInnerWrap h3 em,
+.olive .programEvent ul li .InfoWrap a,
+.olive .programList li .InfoWrap a.airTime,
+.olive .vodView .otherVod h4 em,
+.olive .vodMain .topContent .relatedNews dt,
+.olive aside .p_wrap dl dt,
+.olive .bbsListTypeDefault td em,
+.olive .app_download .download_wrap .app_title span,
+.olive .otherEvent .titleWrap h4 strong,
+.olive .channelEvtList .titleWrap h4 span {color:#ff3700;}
+
+.olive span.icon_new, li.olive span.icon_new {background-position:-15px -250px;}
+.olive .vodMain .topContent .thumbnailList li.selected a {background:url('../images/common/bg/bg_thumbnailBox_olive.gif?v=180307') no-repeat;}
+
+
+.olive .mc_top_wrap dl.schedule_wrap dd ul li.onair .icon_onair {background-position:0 -180px;}
+
+.olive ::-moz-selection {
+  background:#ff3700; color: #fff; text-shadow: none;
+}
+.olive ::selection {
+  background:#ff3700; color: #fff; text-shadow: none;
+}
+.olive .pocGnb .pocGnbArea > .pocNavi > li .depth1 a.selected,.olive .pocGnb .pocGnbArea > .pocNavi > li .depth1 a:hover {background:#ff3700;}
+.olive #view_cont .list_movie li.selected .pic_b {border-color:#ff3700;}
+
+.poc_title .poc_list li.storyon:hover a, .poc_title .poc_list li.storyon.selected a, .poc_wrap .storyon .go_channel span.storyon,
+.storyon .depth1 .lnb_menu li.selected a.depth01,
+.storyon .lnb_wrap .lnb_2depth dl dt , 
+.storyon .lnb_wrap .lnb_2depth dl dt a,
+.storyon .main_title_wrap p span,
+.storyon .mc_top_wrap dl.schedule_wrap dt p span ,
+.storyon .mc_top_wrap dl.schedule_wrap dd ul li span,
+.storyon .tv_wrap .program_right .program_vod dl.tv_vod dd.program_title,
+.storyon .tv_wrap .tv_right .p_wrap dl dt,
+.storyon .contentInnerWrap h3 em,
+.storyon .programEvent ul li .InfoWrap a,
+.storyon .programList li .InfoWrap a.airTime,
+.storyon .vodView .otherVod h4 em,
+.storyon .vodMain .topContent .relatedNews dt,
+.storyon aside .p_wrap dl dt,
+.storyon .bbsListTypeDefault td em,
+.storyon .app_download .download_wrap .app_title span,
+.storyon .otherEvent .titleWrap h4 strong,
+.storyon .channelEvtList .titleWrap h4 span {color:#1033b7;}
+
+.storyon span.icon_new, li.storyon span.icon_new {background-position:-30px -250px;}
+.storyon .vodMain .topContent .thumbnailList li.selected a {background:url('../images/common/bg/bg_thumbnailBox_storyon.gif') no-repeat !important;}
+
+
+
+.storyon .mc_top_wrap dl.schedule_wrap dd ul li.onair .icon_onair {background-position:0 -40px;}
+
+.storyon ::-moz-selection {
+  background:#1033b7; color: #fff; text-shadow: none;
+}
+.storyon ::selection {
+  background:#1033b7; color: #fff; text-shadow: none;
+}
+
+.storyon .pocGnb .pocGnbArea > .pocNavi > li .depth1 a.selected, .storyon .pocGnb .pocGnbArea > .pocNavi > li .depth1 a:hover {background:#1033b7;}
+.storyon #view_cont .list_movie li.selected .pic_b {border-color:#1033b7;}
+
+.poc_title .poc_list li.xtm:hover a, .poc_title .poc_list li.xtm.selected a, .poc_wrap .xtm .go_channel span,
+.xtm .depth1 .lnb_menu li.selected a.depth01,
+.xtm .lnb_wrap .lnb_2depth dl dt ,
+.xtm .lnb_wrap .lnb_2depth dl dt a,
+.xtm .main_title_wrap p span,
+.xtm .mc_top_wrap dl.schedule_wrap dt p span ,
+.xtm .mc_top_wrap dl.schedule_wrap dd ul li span,
+.xtm .tv_wrap .program_right .program_vod dl.tv_vod dd.program_title,
+.xtm .tv_wrap .tv_right .p_wrap dl dt,
+.xtm .contentInnerWrap h3 em,
+.xtm .programEvent ul li .InfoWrap a,
+.xtm .programList li .InfoWrap a.airTime,
+.xtm .vodView .otherVod h4 em,
+.xtm .vodMain .topContent .relatedNews dt,
+.xtm aside .p_wrap dl dt,
+.xtm .bbsListTypeDefault td em,
+.xtm .app_download .download_wrap .app_title span,
+.xtm .otherEvent .titleWrap h4 strong,
+.xtm .channelEvtList .titleWrap h4 span {color:#4795ff;}
+
+.xtm span.icon_new, li.xtm span.icon_new {background-position:-45px -250px;}
+.xtm .vodMain .topContent .thumbnailList li.selected a {background:url('../images/common/bg/bg_thumbnailBox_xtm.gif') no-repeat !important;}
+
+
+
+.xtm .mc_top_wrap dl.schedule_wrap dd ul li.onair .icon_onair {background-position:0 -60px;}
+
+.xtm ::-moz-selection {
+  background:#99c4ff; color: #fff; text-shadow: none;
+}
+.xtm ::selection {
+  background:#99c4ff; color: #fff; text-shadow: none;
+}
+
+.xtm .pocGnb .pocGnbArea > .pocNavi > li .depth1 a.selected, .xtm .pocGnb .pocGnbArea > .pocNavi > li .depth1 a:hover {background:#99c4ff;}
+.xtm #view_cont .list_movie li.selected .pic_b {border-color:#99c4ff;}
+
+
+
+.poc_title .poc_list li.chcgv:hover a, .poc_title .poc_list li.chcgv.selected a, .poc_wrap .chcgv .go_channel span,
+.chcgv .depth1 .lnb_menu li.selected a.depth01,
+.chcgv .lnb_wrap .lnb_2depth dl dt ,
+.chcgv .lnb_wrap .lnb_2depth dl dt a,
+.chcgv .main_title_wrap p span,
+.chcgv .mc_top_wrap dl.schedule_wrap dt p span ,
+.chcgv .mc_top_wrap dl.schedule_wrap dd ul li span,
+.chcgv .tv_wrap .program_right .program_vod dl.tv_vod dd.program_title,
+.chcgv .tv_wrap .tv_right .p_wrap dl dt,
+.chcgv .contentInnerWrap h3 em,
+.chcgv .programEvent ul li .InfoWrap a,
+.chcgv .programList li .InfoWrap a.airTime,
+.chcgv .vodView .otherVod h4 em,
+.chcgv .vodMain .topContent .relatedNews dt,
+.chcgv aside .p_wrap dl dt,
+.chcgv .bbsListTypeDefault td em,
+.chcgv .app_download .download_wrap .app_title span,
+.chcgv .otherEvent .titleWrap h4 strong,
+.chcgv .channelEvtList .titleWrap h4 span {color:#ef4821;}
+
+.chcgv span.icon_new, li.chcgv span.icon_new {background-position:-60px -250px;}
+.chcgv .vodMain .topContent .thumbnailList li.selected a {background:url('../images/common/bg/bg_thumbnailBox_chcgv.gif') no-repeat !important;}
+
+
+.chcgv .mc_top_wrap dl.schedule_wrap dd ul li.onair .icon_onair {background-position:0 -80px;}
+
+.chcgv ::-moz-selection {
+  background:#ef4821; color: #fff; text-shadow: none;
+}
+.chcgv ::selection {
+  background:#ef4821; color: #fff; text-shadow: none;
+}
+
+
+.chcgv .pocGnb .pocGnbArea > .pocNavi > li .depth1 a.selected, .chcgv .pocGnb .pocGnbArea > .pocNavi > li .depth1 a:hover {background:#ef4821;}
+.chcgv #view_cont .list_movie li.selected .pic_b {border-color:#ef4821;}
+
+
+
+
+.poc_title .poc_list li.ocn:hover a, .poc_title .poc_list li.ocn.selected a, .poc_wrap .ocn .go_channel span,
+.ocn .depth1 .lnb_menu li.selected a.depth01,
+.ocn .lnb_wrap .lnb_2depth dl dt ,
+.ocn .lnb_wrap .lnb_2depth dl dt a,
+.ocn .main_title_wrap p span,
+.ocn .mc_top_wrap dl.schedule_wrap dt p span ,
+.ocn .mc_top_wrap dl.schedule_wrap dd ul li span,
+.ocn .tv_wrap .program_right .program_vod dl.tv_vod dd.program_title,
+.ocn .tv_wrap .tv_right .p_wrap dl dt,
+.ocn .contentInnerWrap h3 em,
+.ocn .programEvent ul li .InfoWrap a,
+.ocn .programList li .InfoWrap a.airTime,
+.ocn .vodView .otherVod h4 em,
+.ocn .vodMain .topContent .relatedNews dt,
+.ocn aside .p_wrap dl dt,
+.ocn .bbsListTypeDefault td em,
+.ocn .app_download .download_wrap .app_title span,
+.ocn .otherEvent .titleWrap h4 strong,
+.ocn .channelEvtList .titleWrap h4 span {color:#f38d26;}
+.ocn .vodMain .topContent .relatedNews dt {color:#f38d26 !important;}
+
+.ocn span.icon_new, li.ocn span.icon_new {background-position:-75px -250px;}
+.ocn .vodMain .topContent .thumbnailList li.selected a {background:url('../images/common/bg/bg_thumbnailBox_ocn.gif') no-repeat !important;}
+
+
+.ocn .mc_top_wrap dl.schedule_wrap dd ul li.onair .icon_onair {background-position:0 -100px;}
+
+.ocn ::-moz-selection {
+  background:#f38d26; color: #fff; text-shadow: none;
+}
+.ocn ::selection {
+  background:#f38d26; color: #fff; text-shadow: none;
+}
+
+.ocn .pocGnb .pocGnbArea > .pocNavi > li .depth1 a.selected, .ocn .pocGnb .pocGnbArea > .pocNavi > li .depth1 a:hover {background:#f38d26;}
+.ocn #view_cont .list_movie li.selected .pic_b {border-color:#f38d26;}
+
+.poc_title .poc_list li.ocnseries:hover a, .poc_title .poc_list li.ocnseries.selected a, .poc_wrap .ocnseries .go_channel span,
+.ocnseries .depth1 .lnb_menu li.selected a.depth01,
+.ocnseries .lnb_wrap .lnb_2depth dl dt ,
+.ocnseries .lnb_wrap .lnb_2depth dl dt a,
+.ocnseries .main_title_wrap p span,
+.ocnseries .mc_top_wrap dl.schedule_wrap dt p span ,
+.ocnseries .mc_top_wrap dl.schedule_wrap dd ul li span,
+.ocnseries .tv_wrap .program_right .program_vod dl.tv_vod dd.program_title,
+.ocnseries .tv_wrap .tv_right .p_wrap dl dt,
+.ocnseries .contentInnerWrap h3 em,
+.ocnseries .programEvent ul li .InfoWrap a,
+.ocnseries .programList li .InfoWrap a.airTime,
+.ocnseries .vodView .otherVod h4 em,
+.ocnseries .vodMain .topContent .relatedNews dt,
+.ocnseries aside .p_wrap dl dt,
+.ocnseries .bbsListTypeDefault td em,
+.ocnseries .app_download .download_wrap .app_title span,
+.ocnseries .otherEvent .titleWrap h4 strong,
+.ocnseries .channelEvtList .titleWrap h4 span {color:#f38d26;}
+
+.ocnseries span.icon_new, li.ocnseries span.icon_new {background-position:-90px -250px;}
+.ocnseries .vodMain .topContent .thumbnailList li.selected a {background:url('../images/common/bg/bg_thumbnailBox_ocnseries.gif') no-repeat !important;}
+
+
+.ocnseries .mc_top_wrap dl.schedule_wrap dd ul li.onair .icon_onair {background-position:0 -100px;}
+
+.ocnseries ::-moz-selection {
+  background:#f38d26; color: #fff; text-shadow: none;
+}
+.ocnseries ::selection {
+  background:#f38d26; color: #fff; text-shadow: none;
+}
+
+.ocnseries .pocGnb .pocGnbArea > .pocNavi > li .depth1 a.selected, .ocnseries .pocGnb .pocGnbArea > .pocNavi > li .depth1 a:hover{background:#f38d26;}
+.ocnseries #view_cont .list_movie li.selected .pic_b {border-color:#f38d26;}
+
+
+.poc_title .poc_list li.tvn:hover a, .poc_title .poc_list li.tvn.selected a, .poc_wrap .tvn .go_channel span,
+.tvn .depth1 .lnb_menu li.selected a.depth01,
+.tvn .lnb_wrap .lnb_2depth dl dt ,
+.tvn .lnb_wrap .lnb_2depth dl dt a,
+.tvn .main_title_wrap p span,
+.tvn .mc_top_wrap dl.schedule_wrap dt p span ,
+.tvn .mc_top_wrap dl.schedule_wrap dd ul li span,
+.tvn .tv_wrap .program_right .program_vod dl.tv_vod dd.program_title,
+.tvn .tv_wrap .tv_right .p_wrap dl dt,
+.tvn .contentInnerWrap h3 em,
+.tvn .programEvent ul li .InfoWrap a,
+.tvn .programList li .InfoWrap a.airTime,
+.tvn .vodView .otherVod h4 em,
+.tvn .vodMain .topContent .relatedNews dt,
+.tvn aside .p_wrap dl dt,
+.tvn .bbsListTypeDefault td em,
+.tvn .app_download .download_wrap .app_title span,
+.tvn .otherEvent .titleWrap h4 strong,
+.tvn .channelEvtList .titleWrap h4 span {color:#f22a2a;}
+
+.tvn span.icon_new, li.tvn span.icon_new {background-position:-105px -250px;}
+.tvn .vodMain .topContent .thumbnailList li.selected a {background:url('../images/common/bg/bg_thumbnailBox_tvn.gif') no-repeat !important;}
+
+
+.tvn .mc_top_wrap dl.schedule_wrap dd ul li.onair .icon_onair {background-position:0 -120px;}
+
+.tvn ::-moz-selection {
+  background:#f22a2a; color: #fff; text-shadow: none;
+}
+.tvn ::selection {
+  background:#f22a2a; color: #fff; text-shadow: none;
+}
+
+
+.tvn .pocGnb .pocGnbArea > .pocNavi > li .depth1 a.selected, .tvn .pocGnb .pocGnbArea > .pocNavi > li .depth1 a:hover{background:#f22a2a;}
+.tvn #view_cont .list_movie li.selected .pic_b {border-color:#f22a2a;}
+
+.poc_title .poc_list li.otvn:hover a, .poc_title .poc_list li.otvn.selected a, .poc_wrap .otvn .go_channel span,
+.otvn .depth1 .lnb_menu li.selected a.depth01,
+.otvn .lnb_wrap .lnb_2depth dl dt ,
+.otvn .lnb_wrap .lnb_2depth dl dt a,
+.otvn .main_title_wrap p span,
+.otvn .mc_top_wrap dl.schedule_wrap dt p span ,
+.otvn .mc_top_wrap dl.schedule_wrap dd ul li span,
+.otvn .tv_wrap .program_right .program_vod dl.tv_vod dd.program_title,
+.otvn .tv_wrap .tv_right .p_wrap dl dt,
+.otvn .contentInnerWrap h3 em,
+.otvn .programEvent ul li .InfoWrap a,
+.otvn .programList li .InfoWrap a.airTime,
+.otvn .vodView .otherVod h4 em,
+.otvn .vodMain .topContent .relatedNews dt,
+.otvn aside .p_wrap dl dt,
+.otvn .bbsListTypeDefault td em,
+.otvn .app_download .download_wrap .app_title span,
+.otvn .otherEvent .titleWrap h4 strong,
+.otvn .channelEvtList .titleWrap h4 span {color:#f99d1c;}
+
+.otvn span.icon_new, li.otvn span.icon_new {background-position:-75px -250px;}
+.otvn .vodMain .topContent .thumbnailList li.selected a {background:url('../images/common/bg/bg_thumbnailBox_ocn.gif') no-repeat !important;}
+
+.otvn .tv_wrap .tv_content ul li.selected a {background-position:-247px -118px;}
+
+.otvn .mc_top_wrap dl.schedule_wrap dd ul li.onair .icon_onair {background-position:0 -100px;}
+
+.otvn ::-moz-selection {
+    background:#f99d1c; color: #fff; text-shadow: none;
+}
+.otvn ::selection {
+   background:#f99d1c; color: #fff; text-shadow: none;
+}
+
+.poc_title .poc_list li.superaction:hover a, .poc_title .poc_list li.superaction.selected a, .poc_wrap .superaction .go_channel span,
+.superaction .depth1 .lnb_menu li.selected a.depth01,
+.superaction .lnb_wrap .lnb_2depth dl dt ,
+.superaction .lnb_wrap .lnb_2depth dl dt a,
+.superaction .main_title_wrap p span,
+.superaction .mc_top_wrap dl.schedule_wrap dt p span ,
+.superaction .mc_top_wrap dl.schedule_wrap dd ul li span,
+.superaction .tv_wrap .program_right .program_vod dl.tv_vod dd.program_title,
+.superaction .tv_wrap .tv_right .p_wrap dl dt,
+.superaction .contentInnerWrap h3 em,
+.superaction .programEvent ul li .InfoWrap a,
+.superaction .programList li .InfoWrap a.airTime,
+.superaction .vodView .otherVod h4 em,
+.superaction .vodMain .topContent .relatedNews dt,
+.superaction aside .p_wrap dl dt,
+.superaction .bbsListTypeDefault td em,
+.superaction .app_download .download_wrap .app_title span,
+.superaction .otherEvent .titleWrap h4 strong,
+.superaction .channelEvtList .titleWrap h4 span {color:#d91614;}
+
+.superaction span.icon_new, li.superaction span.icon_new {background-position:-120px -250px;}
+.superaction .vodMain .topContent .thumbnailList li.selected a {background:url('../images/common/bg/bg_thumbnailBox_superaction.gif') no-repeat !important;}
+
+
+.superaction .mc_top_wrap dl.schedule_wrap dd ul li.onair .icon_onair {background-position:0 -140px;}
+
+.superaction .pocGnb .pocGnbArea > .pocNavi > li .depth1 a.selected, .superaction .pocGnb .pocGnbArea > .pocNavi > li .depth1 a:hover {background:#f22a2a;}
+.superaction #view_cont .list_movie li.selected .pic_b {border-color:#f22a2a;}
+
+
+.poc_title .poc_list li.catchon:hover a, .poc_title .poc_list li.catchon.selected a,.poc_wrap .catchon .go_channel span,
+.catchon .depth1 .lnb_menu li.selected a.depth01,
+.catchon .lnb_wrap .lnb_2depth dl dt ,
+.catchon .lnb_wrap .lnb_2depth dl dt a,
+.catchon .main_title_wrap p span,
+.catchon .mc_top_wrap dl.schedule_wrap dt p span ,
+.catchon .mc_top_wrap dl.schedule_wrap dd ul li span,
+.catchon .tv_wrap .program_right .program_vod dl.tv_vod dd.program_title,
+.catchon .tv_wrap .tv_right .p_wrap dl dt,
+.catchon .contentInnerWrap h3 em,
+.catchon .programEvent ul li .InfoWrap a,
+.catchon .programList li .InfoWrap a.airTime,
+.catchon .vodView .otherVod h4 em,
+.catchon .vodMain .topContent .relatedNews dt,
+.catchon aside .p_wrap dl dt,
+.catchon .bbsListTypeDefault td em,
+.catchon .app_download .download_wrap .app_title span,
+.catchon .otherEvent .titleWrap h4 strong,
+.catchon .channelEvtList .titleWrap h4 span {color:#9460ff;}
+
+.catchon span.icon_new, li.catchon span.icon_new {background-position:-135px -250px;}
+.catchon .vodMain .topContent .thumbnailList li.selected a {background:url('../images/common/bg/bg_thumbnailBox_catchon.gif') no-repeat !important;}
+
+
+.catchon .mc_top_wrap dl.schedule_wrap dd ul li.onair .icon_onair {background-position:0 -160px;}
+
+.catchon .pocGnb .pocGnbArea > .pocNavi > li .depth1 a.selected, .catchon .pocGnb .pocGnbArea > .pocNavi > li .depth1 a:hover {background:#9460ff;}
+.catchon #view_cont .list_movie li.selected .pic_b {border-color:#9460ff;}
+
+.poc_title .poc_list li.zhtv:hover a, .poc_title .poc_list li.zhtv.selected a,.poc_wrap .zhtv .go_channel span,
+.zhtv .depth1 .lnb_menu li.selected a.depth01,
+.zhtv .lnb_wrap .lnb_2depth dl dt ,
+.zhtv .lnb_wrap .lnb_2depth dl dt a,
+.zhtv .main_title_wrap p span,
+.zhtv .mc_top_wrap dl.schedule_wrap dt p span ,
+.zhtv .mc_top_wrap dl.schedule_wrap dd ul li span,
+.zhtv .tv_wrap .program_right .program_vod dl.tv_vod dd.program_title,
+.zhtv .tv_wrap .tv_right .p_wrap dl dt,
+.zhtv .contentInnerWrap h3 em,
+.zhtv .programEvent ul li .InfoWrap a,
+.zhtv .programList li .InfoWrap a.airTime,
+.zhtv .vodView .otherVod h4 em,
+.zhtv .vodMain .topContent .relatedNews dt,
+.zhtv aside .p_wrap dl dt,
+.zhtv .bbsListTypeDefault td em,
+.zhtv .app_download .download_wrap .app_title span,
+.zhtv .otherEvent .titleWrap h4 strong,
+.zhtv .channelEvtList .titleWrap h4 span {color:#d91614;}
+
+.zhtv span.icon_new, li.zhtv span.icon_new {background-position:-120px -250px;}
+.zhtv .vodMain .topContent .thumbnailList li.selected a {background:url('../images/common/bg/bg_thumbnailBox_zhtv.gif') no-repeat !important;}
+
+
+
+.zhtv .mc_top_wrap dl.schedule_wrap dd ul li.onair .icon_onair {background-position:0 -140px;}
+
+.zhtv ::-moz-selection {
+  background:#d91614; color: #fff; text-shadow: none;
+}
+.zhtv ::selection {
+  background:#d91614; color: #fff; text-shadow: none;
+}
+
+.zhtv .pocGnb .pocGnbArea > .pocNavi > li .depth1 a.selected, .zhtv .pocGnb .pocGnbArea > .pocNavi > li .depth1 a:hover {background:#d91614;}
+.zhtv #view_cont .list_movie li.selected .pic_b {border-color:#d91614;}
+
+.poc_title .poc_list li.cj_enter:hover a, .poc_title .poc_list li.cj_enter.selected a, .poc_wrap .cj_enter .go_channel span,
+.cj_enter .depth1 .lnb_menu li.selected a.depth01,
+.cj_enter .lnb_wrap .lnb_2depth dl dt ,
+.cj_enter .lnb_wrap .lnb_2depth dl dt a,
+.cj_enter .main_title_wrap p span,
+.cj_enter .mc_top_wrap dl.schedule_wrap dt p span ,
+.cj_enter .mc_top_wrap dl.schedule_wrap dd ul li span,
+.cj_enter .tv_wrap .program_right .program_vod dl.tv_vod dd.program_title,
+.cj_enter .tv_wrap .tv_right .p_wrap dl dt,
+.cj_enter .contentInnerWrap h3 em,
+.cj_enter .programEvent ul li .InfoWrap a,
+.cj_enter .programList li .InfoWrap a.airTime,
+.cj_enter .vodView .otherVod h4 em,
+.cj_enter .vodMain .topContent .relatedNews dt,
+.cj_enter aside .p_wrap dl dt,
+.cj_enter .bbsListTypeDefault td em,
+.cj_enter .app_download .download_wrap .app_title span,
+.cj_enter .otherEvent .titleWrap h4 strong,
+.cj_enter .channelEvtList .titleWrap h4 span {color:#d91614;}
+
+.cj_enter span.icon_new, li.cj_enter span.icon_new {background-position:-165px -250px;}
+.cj_enter .vodMain .topContent .thumbnailList li.selected a {background:url('../images/common/bg/bg_thumbnailBox_cj_enter.gif') no-repeat !important;}
+
+
+.cj_enter .mc_top_wrap dl.schedule_wrap dd ul li.onair .icon_onair {background-position:0 -200px;}
+
+.cj_enter .pocGnb .pocGnbArea > .pocNavi > li .depth1 a.selected, .cj_enter .pocGnb .pocGnbArea > .pocNavi > li .depth1 a:hover {background:#d91614;}
+.cj_enter #view_cont .list_movie li.selected .pic_b {border-color:#d91614;}
+
+.poc_title .poc_list li.cj_concert:hover a, .poc_title .poc_list li.cj_concert.selected a, .poc_wrap .cj_concert .go_channel span,
+.cj_concert .depth1 .lnb_menu li.selected a.depth01,
+.cj_concert .lnb_wrap .lnb_2depth dl dt ,
+.cj_concert .lnb_wrap .lnb_2depth dl dt a,
+.cj_concert .main_title_wrap p span,
+.cj_concert .mc_top_wrap dl.schedule_wrap dt p span ,
+.cj_concert .mc_top_wrap dl.schedule_wrap dd ul li span,
+.cj_concert .tv_wrap .program_right .program_vod dl.tv_vod dd.program_title,
+.cj_concert .tv_wrap .tv_right .p_wrap dl dt,
+.cj_concert .contentInnerWrap h3 em,
+.cj_concert .programEvent ul li .InfoWrap a,
+.cj_concert .programList li .InfoWrap a.airTime,
+.cj_concert .vodView .otherVod h4 em,
+.cj_concert .vodMain .topContent .relatedNews dt,
+.cj_concert aside .p_wrap dl dt,
+.cj_concert .bbsListTypeDefault td em,
+.cj_concert .app_download .download_wrap .app_title span,
+.cj_concert .otherEvent .titleWrap h4 strong,
+.cj_concert .channelEvtList .titleWrap h4 span {color:#d91614;}
+
+.cj_concert span.icon_new, li.cj_concert span.icon_new {background-position:-180px -250px;}
+.cj_concert .vodMain .topContent .thumbnailList li.selected a {background:url('../images/common/bg/bg_thumbnailBox_cj_concert.gif') no-repeat !important;}
+
+
+.cj_concert .mc_top_wrap dl.schedule_wrap dd ul li.onair .icon_onair {background-position:0 -200px;}
+
+.cj_concert .pocGnb .pocGnbArea > .pocNavi > li .depth1 a.selected, .cj_concert .pocGnb .pocGnbArea > .pocNavi > li .depth1 a:hover {background:#d91614;}
+.cj_concert #view_cont .list_movie li.selected .pic_b {border-color:#d91614;}
+
+
+
+.poc_title .poc_list li.ngc:hover a, .poc_title .poc_list li.ngc.selected a, .poc_wrap .ngc .go_channel span,
+.ngc .depth1 .lnb_menu li.selected a.depth01,
+.ngc .lnb_wrap .lnb_2depth dl dt ,
+.ngc .lnb_wrap .lnb_2depth dl dt a,
+.ngc .main_title_wrap p span,
+.ngc .mc_top_wrap dl.schedule_wrap dt p span ,
+.ngc .mc_top_wrap dl.schedule_wrap dd ul li span,
+.ngc .tv_wrap .program_right .program_vod dl.tv_vod dd.program_title,
+.ngc .tv_wrap .tv_right .p_wrap dl dt,
+.ngc .contentInnerWrap h3 em,
+.ngc .programEvent ul li .InfoWrap a,
+.ngc .programList li .InfoWrap a.airTime,
+.ngc .vodView .otherVod h4 em,
+.ngc .vodMain .topContent .relatedNews dt,
+.ngc aside .p_wrap dl dt,
+.ngc .bbsListTypeDefault td em,
+.ngc .app_download .download_wrap .app_title span,
+.ngc .otherEvent .titleWrap h4 strong,
+.ngc .channelEvtList .titleWrap h4 span {color:#f38d26;}
+
+.ngc span.icon_new, li.ngc span.icon_new {background-position:-90px -250px;}
+.ngc .vodMain .topContent .thumbnailList li.selected a {background:url('../images/common/bg/bg_thumbnailBox_ngc.gif') no-repeat !important;}
+
+
+.ngc .mc_top_wrap dl.schedule_wrap dd ul li.onair .icon_onair {background-position:0 -100px;}
+
+.ngc ::-moz-selection {
+  background:#f38d26; color: #fff; text-shadow: none;
+}
+.ngc ::selection {
+  background:#f38d26; color: #fff; text-shadow: none;
+}
+
+
+.ngc .pocGnb .pocGnbArea > .pocNavi > li .depth1 a.selected, .ngc .pocGnb .pocGnbArea > .pocNavi > li .depth1 a:hover {background:#f38d26;}
+.ngc #view_cont .list_movie li.selected .pic_b {border-color:#f38d26;}
+
+
+.poc_title .poc_list li.onstyle:hover a, .poc_title .poc_list li.onstyle.selected a, .poc_wrap .onstyle .go_channel span,
+.onstyle2012 .depth1 .lnb_menu li:hover a.depth01,
+.onstyle2012 .depth1 .lnb_menu li.selected a.depth01,
+.onstyle2012 .lnb_wrap .lnb_2depth dl dt ,
+.onstyle2012 .lnb_wrap .lnb_2depth dl dt a,
+.onstyle2012 .main_title_wrap p span,
+.onstyle2012 .mc_top_wrap dl.schedule_wrap dt p span ,
+.onstyle2012 .mc_top_wrap dl.schedule_wrap dd ul li span,
+.onstyle2012 .tv_wrap .program_right .program_vod dl.tv_vod dd.program_title,
+.onstyle2012 .tv_wrap .tv_right .p_wrap dl dt,
+.onstyle2012 .contentInnerWrap h3 em,
+.onstyle2012 .programEvent ul li .InfoWrap a,
+.onstyle2012 .programList li .InfoWrap a.airTime,
+.onstyle2012 .vodView .otherVod h4 em,
+.onstyle2012 .vodMain .topContent .relatedNews dt,
+.onstyle2012 aside .p_wrap dl dt,
+.onstyle2012 .bbsListTypeDefault td em,
+.onstyle2012 .app_download .download_wrap .app_title span,
+.onstyle2012 .channelEvtList .titleWrap h4 span {color:#00ffff;}
+
+.onstyle2012 ::-moz-selection {
+  background:#00ffff; color: #fff; text-shadow: none;
+}
+.onstyle2012 ::selection {
+  background:#00ffff; color: #fff; text-shadow: none;
+}
+
+.onstyle2012 .pocGnb .pocGnbArea > .pocNavi > li .depth1 a.selected, .onstyle2012 .pocGnb .pocGnbArea > .pocNavi > li .depth1 a:hover {background:#00ffff;}
+.onstyle2012 #view_cont .list_movie li.selected .pic_b {border-color:#00ffff;}
+
+.poc_title .poc_list li.giftmap:hover a, .poc_title .poc_list li.giftmap.selected a, .poc_wrap .giftmap .go_channel span,
+.giftmap .depth1 .lnb_menu li.selected a.depth01,
+.giftmap .lnb_wrap .lnb_2depth dl dt ,
+.giftmap .lnb_wrap .lnb_2depth dl dt a,
+.giftmap .main_title_wrap p span,
+.giftmap .mc_top_wrap dl.schedule_wrap dt p span ,
+.giftmap .mc_top_wrap dl.schedule_wrap dd ul li span,
+.giftmap .tv_wrap .program_right .program_vod dl.tv_vod dd.program_title,
+.giftmap .tv_wrap .tv_right .p_wrap dl dt,
+.giftmap .contentInnerWrap h3 em,
+.giftmap .programEvent ul li .InfoWrap a,
+.giftmap .programList li .InfoWrap a.airTime,
+.giftmap .vodView .otherVod h4 em,
+.giftmap .vodMain .topContent .relatedNews dt,
+.giftmap aside .p_wrap dl dt,
+.giftmap .bbsListTypeDefault td em,
+.giftmap .app_download .download_wrap .app_title span,
+.giftmap .otherEvent .titleWrap h4 strong{color:#00f6ff;}
+.giftmap span.icon_new, li.giftmap span.icon_new {background-position:-225px -250px;}
+.giftmap .vodMain .topContent .thumbnailList li.selected a {background:url('../images/common/bg/bg_thumbnailBox_giftmap.gif') no-repeat !important;}
+
+
+.giftmap .mc_top_wrap dl.schedule_wrap dd ul li.onair .icon_onair {background-position:0 -100px;}
+
+.giftmap ::-moz-selection {
+  background:#00f6ff; color: #fff; text-shadow: none;
+}
+.giftmap ::selection {
+  background:#00f6ff; color: #fff; text-shadow: none;
+}
+
+.giftmap .pocGnb .pocGnbArea > .pocNavi > li .depth1 a.selected, .giftmap .pocGnb .pocGnbArea > .pocNavi > li .depth1 a:hover{background:#00f6ff;}
+.giftmap #view_cont .list_movie li.selected .pic_b {border-color:#00f6ff;}
+
+.poc_title .poc_list li.ls3040:hover a, .poc_title .poc_list li.ls3040.selected a, .poc_wrap .ls3040 .go_channel span,
+.ls3040 .depth1 .lnb_menu li.selected a.depth01,
+.ls3040 .lnb_wrap .lnb_2depth dl dt ,
+.ls3040 .lnb_wrap .lnb_2depth dl dt a,
+.ls3040 .main_title_wrap p span,
+.ls3040 .mc_top_wrap dl.schedule_wrap dt p span ,
+.ls3040 .mc_top_wrap dl.schedule_wrap dd ul li span,
+.ls3040 .tv_wrap .program_right .program_vod dl.tv_vod dd.program_title,
+.ls3040 .tv_wrap .tv_right .p_wrap dl dt,
+.ls3040 .contentInnerWrap h3 em,
+.ls3040 .programEvent ul li .InfoWrap a,
+.ls3040 .programList li .InfoWrap a.airTime,
+.ls3040 .vodView .otherVod h4 em,
+.ls3040 .vodMain .topContent .relatedNews dt,
+.ls3040 aside .p_wrap dl dt,
+.ls3040 .bbsListTypeDefault td em,
+.ls3040 .app_download .download_wrap .app_title span,
+.ls3040 .otherEvent .titleWrap h4 strong{color:#66cdb3;}
+.ls3040 span.icon_new, li.ls3040 span.icon_new {background-position:-225px -250px;}
+.ls3040 ::-moz-selection {
+  background:#0bb7b2; color: #fff; text-shadow: none;
+}
+.ls3040 ::selection {
+  background:#0bb7b2; color: #fff; text-shadow: none;
+}
+
+.ls3040 .pocGnb .pocGnbArea > .pocNavi > li .depth1 a.selected, .ls3040 .pocGnb .pocGnbArea > .pocNavi > li .depth1 a:hover {background:#0bb7b2;}
+.ls3040 #view_cont .list_movie li.selected .pic_b {border-color:#0bb7b2;}
+
+
+.lifestyler .depth1 .lnb_menu li.selected a.depth01,
+.lifestyler .lnb_wrap .lnb_2depth dl dt,
+.lifestyler .lnb_wrap .lnb_2depth dl dt a {color:#cc99ff !important;}
+.lifestyler span.icon_new, li.lifestyler span.icon_new {background-position:-195px -250px;}
+.lifestyler .pocGnb .pocGnbArea > .pocNavi > li .depth1 a.selected, .lifestyler .pocGnb .pocGnbArea > .pocNavi > li .depth1 a:hover {background:#cc99ff;}
+.lifestyler #view_cont .list_movie li.selected .pic_b {border-color:#cc99ff;}
+
+.poc_title .poc_list li.mnet :hover a, .poc_title .poc_list li.mnet .selected a, .poc_wrap .mnet .go_channel span,
+.mnet .depth1 .lnb_menu li.selected a.depth01,
+.mnet .lnb_wrap .lnb_2depth dl dt ,
+.mnet .lnb_wrap .lnb_2depth dl dt a,
+.mnet .main_title_wrap p span,
+.mnet .mc_top_wrap dl.schedule_wrap dt p span ,
+.mnet .mc_top_wrap dl.schedule_wrap dd ul li span,
+.mnet .tv_wrap .program_right .program_vod dl.tv_vod dd.program_title,
+.mnet .tv_wrap .tv_right .p_wrap dl dt,
+.mnet .contentInnerWrap h3 em,
+.mnet .programEvent ul li .InfoWrap a,
+.mnet .programList li .InfoWrap a.airTime,
+.mnet .vodView .otherVod h4 em,
+.mnet .vodMain .topContent .relatedNews dt,
+.mnet aside .p_wrap dl dt,
+.mnet .bbsListTypeDefault td em,
+.mnet .app_download .download_wrap .app_title span,
+.mnet .otherEvent .titleWrap h4 strong,
+.mnet .channelEvtList .titleWrap h4 span {color:#e50277;}
+
+.mnet span.icon_new, li.mnet span.icon_new {background-position:-90px -250px;}
+.mnet .vodMain .topContent .thumbnailList li.selected a {background:url('../images/common/bg/bg_thumbnailBox_mnet.gif') no-repeat !important;}
+
+.mnet .mc_top_wrap dl.schedule_wrap dd ul li.onair .icon_onair {background-position:0 -100px;}
+
+.mnet ::-moz-selection {
+ background:#e50277; color: #fff; text-shadow: none;
+}
+.mnet ::selection {
+ background:#e50277; color: #fff; text-shadow: none;
+}
+
+.mnet .pocGnb .pocGnbArea > .pocNavi > li .depth1 a.selected, .mnet .pocGnb .pocGnbArea > .pocNavi > li .depth1 a:hover {background:#e50277;}
+.mnet #view_cont .list_movie li.selected .pic_b {border-color:#e50277;}
+
+/* 2018/07/18 ogn : #318531 -> #00b9b2 */
+.poc_title .poc_list li.ongamenet:hover a, .poc_title .poc_list li.ongamenet.selected a, .poc_wrap .ongamenet .go_channel span,
+.ongamenet .depth1 .lnb_menu li.selected a.depth01,
+.ongamenet .lnb_wrap .lnb_2depth dl dt ,
+.ongamenet .lnb_wrap .lnb_2depth dl dt a,
+.ongamenet .main_title_wrap p span,
+.ongamenet .mc_top_wrap dl.schedule_wrap dt p span ,
+.ongamenet .mc_top_wrap dl.schedule_wrap dd ul li span,
+.ongamenet .tv_wrap .program_right .program_vod dl.tv_vod dd.program_title,
+.ongamenet .tv_wrap .tv_right .p_wrap dl dt,
+.ongamenet .contentInnerWrap h3 em,
+.ongamenet .programEvent ul li .InfoWrap a,
+.ongamenet .programList li .InfoWrap a.airTime,
+.ongamenet .vodView .otherVod h4 em,
+.ongamenet .vodMain .topContent .relatedNews dt,
+.ongamenet aside .p_wrap dl dt,
+.ongamenet .bbsListTypeDefault td em,
+.ongamenet .app_download .download_wrap .app_title span,
+.ongamenet .otherEvent .titleWrap h4 strong,
+.ongamenet .channelEvtList .titleWrap h4 span {color:#00b9b2;}
+.ongamenet .vodMain .topContent .relatedNews dt {color:#00b9b2 !important;}
+
+.ongamenet span.icon_new, li.ongamenet span.icon_new {background-position:-240px -250px;}
+.ongamenet .vodMain .topContent .thumbnailList li.selected a {background:url('../images/common/bg/bg_thumbnailBox_ongame.gif?v=180717') no-repeat !important;}
+
+
+.ongamenet .mc_top_wrap dl.schedule_wrap dd ul li.onair .icon_onair {background-position:0 -220px;}
+
+.ongamenet ::-moz-selection {
+  background:#00b9b2; color: #fff; text-shadow: none;
+}
+.ongamenet ::selection {
+  background:#00b9b2; color: #fff; text-shadow: none;
+}
+
+.ongamenet .pocGnb .pocGnbArea > .pocNavi > li .depth1 a.selected, .ongamenet .pocGnb .pocGnbArea > .pocNavi > li .depth1 a:hover {background:#00b9b2;}
+.ongamenet #view_cont .list_movie li.selected .pic_b {border-color:#00b9b2;}
+
+.ongamenet .pocGnb .pocGnbArea > .pongamenetavi > li .depth1 a.selected, .ongamenet .pocGnb .pocGnbArea > .pongamenetavi > li .depth1 a:hover {background:#00b9b2;}
+.ongamenet #view_cont .list_movie li.selected .pic_b {border-color:#00b9b2;}
+
+/* 2015/05/20 UXN */
+.poc_title .poc_list li.uxn:hover a, .poc_title .poc_list li.uxn.selected a, .poc_wrap .uxn .go_channel span,
+.uxn .depth1 .lnb_menu li.selected a.depth01,
+.uxn .lnb_wrap .lnb_2depth dl dt ,
+.uxn .lnb_wrap .lnb_2depth dl dt a,
+.uxn .main_title_wrap p span,
+.uxn .mc_top_wrap dl.schedule_wrap dt p span ,
+.uxn .mc_top_wrap dl.schedule_wrap dd ul li span,
+.uxn .tv_wrap .program_right .program_vod dl.tv_vod dd.program_title,
+.uxn .tv_wrap .tv_right .p_wrap dl dt,
+.uxn .contentInnerWrap h3 em,
+.uxn .programEvent ul li .InfoWrap a,
+.uxn .programList li .InfoWrap a.airTime,
+.uxn .vodView .otherVod h4 em,
+.uxn .vodMain .topContent .relatedNews dt,
+.uxn aside .p_wrap dl dt,
+.uxn .bbsListTypeDefault td em,
+.uxn .app_download .download_wrap .app_title span,
+.uxn .otherEvent .titleWrap h4 strong,
+.uxn .channelEvtList .titleWrap h4 span {color:#3ba9ce;}
+
+.uxn .main_title_wrap p span,
+.uxn .contentInnerWrap h3 em {font-family:Arial;}
+
+.uxn span.icon_new, li.uxn span.icon_new {background-position:-255px -250px;}
+.uxn .vodMain .topContent .thumbnailList li.selected a {background:url('../images/common/bg/bg_thumbnailBox_uxn.gif') no-repeat !important;}
+
+
+.uxn .mc_top_wrap dl.schedule_wrap dd ul li.onair .icon_onair {background-position:-80px 0;}
+
+.uxn ::-moz-selection {
+  background:#3ba9ce; color: #fff; text-shadow: none;
+}
+.uxn ::selection {
+  background:#3ba9ce; color: #fff; text-shadow: none;
+}
+
+
+.uxn .pocGnb .pocGnbArea > .pocNavi > li .depth1 a.selected, .uxn .pocGnb .pocGnbArea > .pocNavi > li .depth1 a:hover{background:#3ba9ce;}
+.uxn #view_cont .list_movie li.selected .pic_b {border-color:#3ba9ce;}
+
+/* 2017/12/05 Tooniverse */
+.poc_title .poc_list li.tooniverse:hover a, .poc_title .poc_list li.tooniverse.selected a, .poc_wrap .tooniverse .go_channel span,
+.tooniverse .depth1 .lnb_menu li.selected a.depth01,
+.tooniverse .lnb_wrap .lnb_2depth dl dt ,
+.tooniverse .lnb_wrap .lnb_2depth dl dt a,
+.tooniverse .main_title_wrap p span,
+.tooniverse .mc_top_wrap dl.schedule_wrap dt p span ,
+.tooniverse .mc_top_wrap dl.schedule_wrap dd ul li span,
+.tooniverse .tv_wrap .program_right .program_vod dl.tv_vod dd.program_title,
+.tooniverse .tv_wrap .tv_right .p_wrap dl dt,
+.tooniverse .contentInnerWrap h3 em,
+.tooniverse .programEvent ul li .InfoWrap a,
+.tooniverse .programList li .InfoWrap a.airTime,
+.tooniverse .vodView .otherVod h4 em,
+.tooniverse .vodMain .topContent .relatedNews dt,
+.tooniverse aside .p_wrap dl dt,
+.tooniverse .bbsListTypeDefault td em,
+.tooniverse .app_download .download_wrap .app_title span,
+.tooniverse .otherEvent .titleWrap h4 strong,
+.tooniverse .channelEvtList .titleWrap h4 span {color:#00aeef/*#f1645d*/;}
+
+.tooniverse span.icon_new, li.tooniverse span.icon_new {background-position:-105px -250px;}
+.tooniverse .vodMain .topContent .thumbnailList li.selected a {background:url('../images/common/bg/bg_thumbnailBox_tooniverse.gif') no-repeat !important;}
+
+.tooniverse .mc_top_wrap dl.schedule_wrap dd ul li.onair .icon_onair {background-position:0 -120px;}
+
+.tooniverse ::-moz-selection {
+  background:#00aeef; color: #fff; text-shadow: none;
+}
+.tooniverse ::selection {
+  background:#00aeef; color: #fff; text-shadow: none;
+}
+
+.tooniverse .pocGnb .pocGnbArea > .pocNavi > li .depth1 a.selected, .tooniverse .pocGnb .pocGnbArea > .pocNavi > li .depth1 a:hover{background:#00aeef;}
+.tooniverse #view_cont .list_movie li.selected .pic_b {border-color:#00aeef;}
+
+/* 2017/12/12 XtvN */
+.poc_title .poc_list li.xtvn:hover a, .poc_title .poc_list li.xtvn.selected a, .poc_wrap .xtvn .go_channel span,
+.xtvn .depth1 .lnb_menu li.selected a.depth01,
+.xtvn .lnb_wrap .lnb_2depth dl dt ,
+.xtvn .lnb_wrap .lnb_2depth dl dt a,
+.xtvn .main_title_wrap p span,
+.xtvn .mc_top_wrap dl.schedule_wrap dt p span ,
+.xtvn .mc_top_wrap dl.schedule_wrap dd ul li span,
+.xtvn .tv_wrap .program_right .program_vod dl.tv_vod dd.program_title,
+.xtvn .tv_wrap .tv_right .p_wrap dl dt,
+.xtvn .contentInnerWrap h3 em,
+.xtvn .programEvent ul li .InfoWrap a,
+.xtvn .programList li .InfoWrap a.airTime,
+.xtvn .vodView .otherVod h4 em,
+.xtvn .vodMain .topContent .relatedNews dt,
+.xtvn aside .p_wrap dl dt,
+.xtvn .bbsListTypeDefault td em,
+.xtvn .app_download .download_wrap .app_title span,
+.xtvn .otherEvent .titleWrap h4 strong,
+.xtvn .channelEvtList .titleWrap h4 span {color:#0047bb;}
+
+.xtvn span.icon_new, li.xtvn span.icon_new {background-position:-105px -250px;}
+.xtvn .vodMain .topContent .thumbnailList li.selected a {background:url('../images/common/bg/bg_thumbnailBox_xtvn.gif') no-repeat !important;}
+
+.xtvn .mc_top_wrap dl.schedule_wrap dd ul li.onair .icon_onair {background-position:0 -120px;}
+
+.xtvn ::-moz-selection {
+  background:#0047bb; color: #fff; text-shadow: none;
+}
+.xtvn ::selection {
+  background:#0047bb; color: #fff; text-shadow: none;
+}
+
+.xtvn .pocGnb .pocGnbArea > .pocNavi > li .depth1 a.selected, .xtvn .pocGnb .pocGnbArea > .pocNavi > li .depth1 a:hover{background:#0047bb;}
+.xtvn #view_cont .list_movie li.selected .pic_b {border-color:#0047bb;}
+
+/* 2018/05/24 흥 베이커리 */
+.poc_title .poc_list li.funbakery:hover a, .poc_title .poc_list li.funbakery.selected a, .poc_wrap .funbakery .go_channel span,
+.funbakery .depth1 .lnb_menu li.selected a.depth01,
+.funbakery .lnb_wrap .lnb_2depth dl dt ,
+.funbakery .lnb_wrap .lnb_2depth dl dt a,
+.funbakery .main_title_wrap p span,
+.funbakery .mc_top_wrap dl.schedule_wrap dt p span ,
+.funbakery .mc_top_wrap dl.schedule_wrap dd ul li span,
+.funbakery .tv_wrap .program_right .program_vod dl.tv_vod dd.program_title,
+.funbakery .tv_wrap .tv_right .p_wrap dl dt,
+.funbakery .contentInnerWrap h3 em,
+.funbakery .programEvent ul li .InfoWrap a,
+.funbakery .programList li .InfoWrap a.airTime,
+.funbakery .vodView .otherVod h4 em,
+.funbakery .vodMain .topContent .relatedNews dt,
+.funbakery aside .p_wrap dl dt,
+.funbakery .bbsListTypeDefault td em,
+.funbakery .app_download .download_wrap .app_title span,
+.funbakery .otherEvent .titleWrap h4 strong,
+.funbakery .channelEvtList .titleWrap h4 span {color:#8EFFD6;}
+
+.funbakery span.icon_new, li.funbakery span.icon_new {background-position:-105px -250px;}
+.funbakery .vodMain .topContent .thumbnailList li.selected a {background:url('../images/common/bg/bg_thumbnailBox_funbakery.gif') no-repeat !important;}
+
+.funbakery .mc_top_wrap dl.schedule_wrap dd ul li.onair .icon_onair {background-position:0 -120px;}
+
+.funbakery ::-moz-selection {
+  background:#8EFFD6; color: #fff; text-shadow: none;
+}
+.funbakery ::selection {
+  background:#8EFFD6; color: #fff; text-shadow: none;
+}
+
+.funbakery .pocGnb .pocGnbArea > .pocNavi > li .depth1 a.selected, .funbakery .pocGnb .pocGnbArea > .pocNavi > li .depth1 a:hover{background:#8EFFD6;}
+.funbakery #view_cont .list_movie li.selected .pic_b {border-color:#8EFFD6;}
+
+/* 2013/07/16 개인정보 약관동의 추가 */
+.infoAgree { padding:15px; border:1px solid #e9e9e9; background-color:#f3f3f3; }
+.infoAgree .check { margin-bottom:5px; }
+.infoAgree .check input { vertical-align:middle; }
+.infoAgree .check label { color:#333; font-weight:bold; }
+.infoAgree .bx { overflow:auto; height:100px; padding:10px; line-height:20px; color:#767676; border:1px solid #d5d5d5; background-color:#fff; }
+.infoAgree .bx h4 { font-weight:bold; }
+.infoAgree .bx p {  margin-bottom:5px; }
+
+/* 2015/11/19 */
+*:first-child+html #pocHeader .naviWrap .pocNavi > li .depth2 li { float:none !important; display:block !important; }
