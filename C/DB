@@ -1,0 +1,5 @@
+table : value
+
+num int(100) primary key,
+val int(10),
+name varchar(100)
